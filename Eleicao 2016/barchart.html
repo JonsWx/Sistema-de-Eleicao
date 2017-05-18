@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+
+    <title>Chart.js - criando gráficos com a biblioteca Chart.js</title>
+
+    <script src="Chart.min.js"></script>
+
+    <style type="text/css">
+
+    *{
+        font-family: calibri;        
+    }
+
+    .box {
+        margin: 0px auto;
+        width: 70%;
+    }
+
+    .box-chart {
+        width: 100%;
+        margin: 0 auto;
+        padding: 10px;
+    }
+
+    </style>  
+
+    <script type="text/javascript">
+        var randomnb = function(){ return Math.round(Math.random()*400)};
+    </script>  
+
+</head>
+
+<body>    
+
+    <div class="box">
+
+        <div class="box-chart">
+
+            <canvas id="GraficoBarra" style="width:100%;"></canvas>
+
+            <script type="text/javascript">                                        
+
+                var options = {
+                    responsive:true
+                };
+
+                var data = {
+                    labels: ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"],
+                    datasets: [
+                        {
+                            label: "Dados primários",
+                            fillColor: "rgba(220,220,220,0.5)",
+                            strokeColor: "rgba(220,220,220,0.8)",
+                            highlightFill: "rgba(220,220,220,0.75)",
+                            highlightStroke: "rgba(220,220,220,1)",
+                            data: [randomnb(), randomnb(), randomnb(), randomnb(), randomnb(), randomnb(), randomnb(), randomnb(), randomnb(), randomnb(), randomnb(), randomnb()]
+                        },
+                        
+                    ]
+                };                
+
+                window.onload = function(){
+                    var ctx = document.getElementById("GraficoBarra").getContext("2d");
+                    var BarChart = new Chart(ctx).Bar(data, options);
+                }           
+            </script>
+
+        </div>
+    
+    </div>
+</body>
+
+</html>

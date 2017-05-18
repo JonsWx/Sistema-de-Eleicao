@@ -1,0 +1,94 @@
+body{
+  background-color: rgba(153, 255, 102,0.4,);
+}
+a {
+  text-decoration: none;
+}
+.linha-vertical {
+  height: 60px;
+  border-left: 5px solid blue;
+}
+nav {
+  display: table;
+  position: relative;
+  table-layout: fixed;
+  width: 100%;
+}
+nav input {
+  display: none;
+}
+nav label {
+  margin: 0;
+}
+nav div.nav-container {
+  display: table-row;
+}
+nav div.nav-container > div {
+  display: table-cell;
+}
+nav div.nav-container > div:nth-of-type(5n+1) .slide, nav div.nav-container > div:nth-of-type(5n+1) a {
+  border-color: #8cc63f;
+}
+nav div.nav-container > div:nth-of-type(5n+1) .slide:hover, nav div.nav-container > div:nth-of-type(5n+1) a:hover {
+  color: #567b24;
+}
+nav div.nav-container > div:nth-of-type(5n+1) input:checked ~ label, nav div.nav-container > div:nth-of-type(5n+1) .slide.active ~ label {
+  color: #8cc63f;
+}
+
+nav .slide {
+  padding: 30px 30px;
+  font-size: 1em;
+  display: block;
+  color: #393939;
+  border-top: 4px solid transparent;
+  position: relative;
+  -moz-transition-property: border-width, color;
+  -o-transition-property: border-width, color;
+  -webkit-transition-property: border-width, color;
+  transition-property: border-width, color;
+  -moz-transition-duration: 0.1s, 0.2s;
+  -o-transition-duration: 0.1s, 0.2s;
+  -webkit-transition-duration: 0.1s, 0.2s;
+  transition-duration: 0.1s, 0.2s;
+  -moz-transition-timing-function: ease-in;
+  -o-transition-timing-function: ease-in;
+  -webkit-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
+  -moz-transition-delay: 0.2s, 0s;
+  -o-transition-delay: 0.2s, 0s;
+  -webkit-transition-delay: 0.2s, 0s;
+  transition-delay: 0.2s, 0s;
+}
+nav .slide .element {
+  font-size: 1.25em;
+  font-weight: 600;
+  font-style: normal;
+  display: block;
+  line-height: 1;
+}
+  nav div.nav-container {
+    display: block;
+  }
+  nav div.nav-container > div {
+    display: block;
+    margin: 5px 0;
+  }
+  nav div.nav-container > div:hover .slide {
+    border-left-width: 55px;
+    -moz-transition-delay: 0;
+    -o-transition-delay: 0;
+    -webkit-transition-delay: 0;
+    transition-delay: 0;
+  }
+  nav .slide {
+    display: block;
+    width: auto;
+    border-left: solid 4px #393939;
+    border-top: none;
+  }
+  
+
+
+
+
